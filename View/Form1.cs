@@ -34,5 +34,13 @@ namespace PSP
             FormStudents formStudents = new FormStudents(students);
             formStudents.Show();  // Открываем новую форму
         }
+
+        private void btnShowDisciplines_Click(object sender, EventArgs e)
+        {
+            List<Discipline> disciplines = db.GetAllDisciplines();  // Получаем список студентов из базы данных
+            // Открываем новую форму и передаем ей список студентов
+            FormDisciplines formDisciplines = new FormDisciplines(disciplines);
+            formDisciplines.Show();  // Открываем новую форму
+        }
     }
 }
